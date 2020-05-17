@@ -50,16 +50,15 @@ public class LeetCode_94 {
      */
     private void helperLevel(TreeNode root, List<Integer> result) {
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode cur = root;
         while (!stack.isEmpty() || root != null) {
             // 先把所有的左节点 放进去
-            if (null != cur) {
-                stack.push(cur);
-                cur = cur.left;
+            if (null != root) {
+                stack.push(root);
+                root = root.left;
             } else {
-                cur = stack.pop();
-                result.add(cur.val);
-                cur = cur.right;
+                root = stack.pop();
+                result.add(root.val);
+                root = root.right;
             }
         }
 
