@@ -51,10 +51,8 @@ public class LeetCode_22 {
     /**
      * 第二遍
      */
-    private List<String> res;
-
     public List<String> backtrack2(int n) {
-        res = new ArrayList<>();
+        List<String> res = new ArrayList<>();
         backtrack2(res, 0, 0, n,"");
         return res;
     }
