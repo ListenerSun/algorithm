@@ -57,4 +57,29 @@ public class LeetCode_78 {
         list.remove(2);
         System.out.println(list);
     }
+
+    /**
+     * 回溯
+     */
+    List<List<Integer>> result = new ArrayList<>();
+    int k;
+
+    private List<List<Integer>> getResult(int[] nums) {
+        // 每次循环 添加 k 元素个数的子集
+        for (k = 0; k < nums.length + 1; k++) {
+            backtrack(nums, 0, new ArrayList<>());
+        }
+        return result;
+    }
+
+    private void backtrack(int[] nums, int first, List<Integer> cur) {
+        if (cur.size() == k) {
+            result.add(new ArrayList<>(cur));
+        }
+        for (int i = first; i < nums.length; i++) {
+            cur.add(nums[i]);
+            backtrack(nums, first + 1, cur);
+            cur.remove(cur.size() - 1);
+        }
+    }
 }
