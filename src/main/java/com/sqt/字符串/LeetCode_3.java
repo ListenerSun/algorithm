@@ -1,6 +1,8 @@
 package com.sqt.字符串;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -30,7 +32,9 @@ public class LeetCode_3 {
 
     public static void main(String[] args) {
         String s = null;
-        s.length();
+//        s.length();
+        HashMap<String, String> map = new HashMap<>();
+        map.put("1", "1");
     }
 
     public int lengthOfLongestSubstring(String s) {
