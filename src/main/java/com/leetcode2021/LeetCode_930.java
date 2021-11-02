@@ -21,4 +21,25 @@ public class LeetCode_930 {
         }
         return res;
     }
+
+    public int numSubarraysWithSum1(int[] nums, int goal) {
+        int res = 0;
+        int sum = 0;
+        int right = 0, left1 = 0, left2 = 0;
+        while (right < nums.length) {
+            while (left2 < right && left1 < left2) {
+                sum += nums[left1];
+                if (sum == goal) {
+                    res++;
+                }
+                if (sum > goal) {
+                    left2++;
+                    sum = 0;
+                }
+                left1++;
+            }
+            right++;
+        }
+        return res;
+    }
 }

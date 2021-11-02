@@ -8,6 +8,9 @@ import java.util.PriorityQueue;
  * @Date: Created in 2021-07-02 1:15
  */
 public class LeetCode_703 {
+    public static void main(String[] args) {
+
+    }
 
     class KthLargest {
 
@@ -37,9 +40,8 @@ public class LeetCode_703 {
         }
     }
 
-/**
- * Your KthLargest object will be instantiated and called as such:
- * KthLargest obj = new KthLargest(k, nums);
- * int param_1 = obj.add(val);
- */
+    /**
+     * Your KthLargest object will be instantiated and called as such: KthLargest
+     * obj = new KthLargest(k, nums); int param_1 = obj.add(val);
+     */
 }
